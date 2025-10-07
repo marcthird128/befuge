@@ -1,0 +1,6 @@
+# Ignore builds
+obj/
+bin/
+
+# Ignore temp files
+*.swp
