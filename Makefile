@@ -7,8 +7,6 @@ WHITE := \033[0;1m
 
 # Variables
 NAME := befuge
-CC := gcc
-CFLAGS := -Wall -Wextra
 HDRDIR := include/$(NAME)
 SRCDIR := src
 OBJDIR := obj
@@ -17,6 +15,8 @@ HDRS := $(wildcard $(HDRDIR)/*/*.h)
 SRCS := $(wildcard $(SRCDIR)/*/*.c)
 OBJS := $(patsubst $(SRCDIR)/%.c,$(OBJDIR)/%.o,$(SRCS))
 TARGET := $(BINDIR)/$(NAME)
+CC := gcc
+CFLAGS := -Wall -Wextra -I$(HDRDIR)/
 
 # Phony targets
 .PHONY: all build clean
